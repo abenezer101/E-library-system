@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="pl" dir="ltr"> 
+<head>     
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">     
+
+	<meta name="description" content="Serwis internetowy dla miłośników książek"> 
+	<meta name="keywords" content="książka, recenzja, serwis, czytelnik, autor"> 
+	<meta name="author" content="Piotr"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="fontello/css/fontello.css"/>
+	<!-- Load icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap&subset=latin-ext" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
+	<script src="app.js"></script>	
+	<script src="js/menu.js"></script>	
+	<script src="js/menu_mobile.js"></script>	
+
+	<script src="js/form_jquery.js"></script>	
+	<script src="js/ajax.js"></script>
+
+
+</head> 
+<body class="bg-gradient-to-br from-blue-100 to-purple-100">
+	<header class="py-4 bg-opacity-80 backdrop-blur-md  fixed w-full z-50 transition-transform duration-500">
+        <div class="container mx-auto flex justify-between items-center px-4 lg:px-8">
+            <a href="#" class="text-2xl lg:text-3xl font-bold text-indigo-700" style="color: #009de8">Melu'e Foundation E-library</a>
+        </div>
+
+    </header>
+
+
+
+
+	<div id="main" >
+		<div class="content full_width">
+
+			<body class="bg-gradient-to-br from-blue-100 to-purple-100">			
+				<div id="main">
+					<div class="content full_width">
+						<section class="books">
+							<h2 style="font-weight: 700; font-size:xx-large; margin-top: 3rem;">Our book collection</h2>
+							<div class="wrap book_main_list">
+								<div class="box">
+									<!-- index.html -->
+									<form id="searchForm" method="POST" action="search.php">
+										<div class="flex-grow relative">
+											<input type="text" id="book-search" name="query" placeholder="Enter book title, author, or date..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" style="background-color: #e7e7e7">
+											<ul id="suggestions" class="absolute bg-white border border-gray-300 rounded-md shadow-md mt-2 w-full hidden z-20"></ul>
+										</div>
+										<button type="submit" id="search-button" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg" style="width: 100%; margin-top: 7px; background-color: #009de8">Search</button>
+										<select id="category-select" name="category">
+											<option selected value="All">Choose genre</option>
+											<option value="Fiction">Fiction</option>
+											<option value="Religion">Religion</option>
+											<option value="Psychology">Psychology & Self Help</option>
+											<option value="Educational">Educational</option>
+											<option value="Magazine">Magazine</option>
+											<option value="Language">Language & Literacy</option>
+											<option value="Health">Health & Biology</option>
+											<option value="SocialScience">Social Science</option>
+											<option value="History">Biography & History</option>
+											<option value="StoryBooks">Story Books</option>
+											<option value="ChildDevelopment">Child Development</option>
+										</select>
+									</form>
+
+								</div>
+
+
+								<div id="results" class="bookdisplay">
+									<!-- Book items -->
+				
+									<div class="book" data-title="Official Ielts Practice Materials" data-filter="Educational">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/Official Ielts Practice Materials-by UCLES.jpeg" />
+											<div class="info">
+												<h5>Official Ielts Practice Materials</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="little chapel on the river" data-filter="Fiction">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="okładka" src="images/covers/little chapel on the river.jpeg" />
+											<div class="info">
+												<h5>little chapel on the river</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Dinner with skeptics" data-filter="Religion">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/Dinner with skeptics- by Jeff Vines.jpg" />
+											<div class="info">
+												<h5>Dinner with skeptics</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="30-Day wonder" data-filter="Fiction">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/30-Day wonder-by Richard Wilson.jpg" />
+											<div class="info">
+												<h5>30-Day wonder</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Alone We Fly" data-filter="Psychology">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/Alone We Fly - by osho.jpeg" />
+											<div class="info">
+												<h5>Alone We Fly</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Ancient ROME" data-filter="History">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/Ancient ROME by- Eye witness.jpeg" />
+											<div class="info">
+												<h5>Ancient ROME</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="The private patient" data-filter="Magazine">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/The private patient - by PD James.jpeg" />
+											<div class="info">
+												<h5>The private patient</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Clinical Medicine" data-filter="Health">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/Clinical Medicine - by Humayun J. Chaudhry ,Anthony J.Grieco ,Roger Macklis , Michael Mendelsohn , Gilbert H. Mudge, Jr.jpeg" />
+											<div class="info">
+												<h5>Clinical Medicine</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="The complete book of Mother and Baby care" data-filter="ChildDevelopment">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/The complete book of Mother and Baby care -by Elizabeth Fenwick.jpeg" />
+											<div class="info">
+												<h5>The complete book of Mother and Baby care</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="The Theory of Capitalist Development" data-filter="SocialScience">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/The Theory of Capitalist Development -by Paul M.Sweezy.jpg"/>
+											<div class="info">
+												<h5>The Theory of Capitalist Development</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Beginning Programming for DUMMIES" data-filter="Educational">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/Beginning Programming for DUMMIES -by Wallace Wang.jpg" />
+											<div class="info">
+												<h5>Beginning Programming for DUMMIES</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Frozen" data-filter="StoryBooks">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/Frozen -by Victoria Saxon.jpeg" />
+											<div class="info">
+												<h5>Frozen</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Best of mindware brain teasers" data-filter="StoryBooks">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/Best of mindware brain teasers volume6 -by Mindware.jpeg" />
+											<div class="info">
+												<h5>Best of mindware brain teasers</h5>
+											</div>
+										</a>
+									</div>
+
+
+									<div class="book" data-title="Best of mindware brain teasers" data-filter="Fiction">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/90 Minutes At Entebbe.jpg" />
+											<div class="info">
+												<h5>90 Minutes At Entebbe</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Best of mindware brain teasers" data-filter="Fiction">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/A Christmas carol -by Charles Dickens.jpg" />
+											<div class="info">
+												<h5>A Christmas carol</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Best of mindware brain teasers" data-filter="Fiction">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/A season in eden- by megan chance.jpg" />
+											<div class="info">
+												<h5>A season in eden</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Best of mindware brain teasers" data-filter="Fiction">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/A tale of two cities -by charles dickens.jpg" />
+											<div class="info">
+												<h5>A tale of two cities</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Best of mindware brain teasers" data-filter="Fiction">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/A town like alice -by Nevil shute.jpg" />
+											<div class="info">
+												<h5>A town like alice</h5>
+											</div>
+										</a>
+									</div>
+
+									<div class="book" data-title="Best of mindware brain teasers" data-filter="Fiction">
+										<a href="https://t.me/MelueFoundationE_libraryBot">
+											<img class="cover" alt="Book cover" src="images/covers/Absolute power -by David Baldacci.jpg" />
+											<div class="info">
+												<h5>Absolute power</h5>
+											</div>
+										</a>
+									</div>
+
+
+
+
+
+
+
+								</div>
+							</div>
+						</section>
+
+
+
+				<section class="review_list">
+					<h2>Reviews by our Readers</h2>
+					<div class="review_wrap" id="reviews" >
+						<div class="review">
+							<div class="review_body col_60p">
+								<div class="review_info">
+									<div class="avatar">
+										<img alt="avatar" src="images/avatar/1.png" />
+									</div>
+									<div class="review_text">
+										<h3>Abenezer A</h3>
+										<p>I read this book to help form a base level of knowledge for some of the work I'm doing on an IT program. It was useful in introducing programming in several different languages and the commonalities between. Particularly good to have a very introductory view of C++ with BASIC equivalent alongside. But the final couple of chapters were clearly bolted on - the sections on HTML, Javascript, Java etc were rubbish, and clearly written as an update to the older 2001 edition. How can you write about HTML without CSS? So the core bit was good, but ignore the last section</p>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="cover col_40p">
+								<img alt="okładka" src="images/covers/Beginning Programming for DUMMIES -by Wallace Wang.jpg" />
+							</div>
+						</div>
+						<div class="review">
+							<div class="review_body col_60p">
+								<div class="review_info">
+									<div class="avatar">
+										<img alt="avatar" src="images/avatar/2.jpg" />
+									</div>
+									<div class="review_text">
+										<h3>Michael H</h3>
+										<p>I used this material when I had to attend for my IELTS test, it was a good material to have tho the informations are very old in the book and also it more complicated compared to the one which I got during my test. I was happy that the contents in the book were tough as it made me practice more for the test and in the end test ended up being more easier then this book. I would definitely recommend this for tough practice.</p>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="cover col_40p">
+								<img alt="okładka" src="images/covers/Official Ielts Practice Materials-by UCLES.jpeg" />
+							</div>
+						</div>
+						<div class="review">
+							<div class="review_body col_60p">
+								<div class="review_info">
+									<div class="avatar">
+										<img alt="avatar" src="images/avatar/" />
+									</div>
+									<div class="review_text">
+										<h3>Nohami B </h3>
+										<p>I used this material when I had to attend for my IELTS test, it was a good material to have tho the informations are very old in the book and also it more complicated compared to the one which I got during my test. I was happy that the contents in the book were tough as it made me practice more for the test and in the end test ended up being more easier then this book. I would definitely recommend this for tough practice.</p>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="cover col_40p">
+								<img alt="okładka" src="images/covers/Official Ielts Practice Materials-by UCLES.jpeg" />
+							</div>
+						</div>
+						<!-- <div class="review">
+							<div class="review_body col_60p">
+								<div class="review_info">
+									<div class="avatar">
+										<img alt="avatar" src="images/avatar/4.jpeg" />
+									</div>
+									<div class="review_text">
+										<h3>Czy w domu możesz być bezpieczny?</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehen...</p>
+									</div>
+									</a>
+								</div>
+
+							</div>
+							<div class="cover col_40p">
+								<img alt="okładka" src="images//covers/spij-spokojnie.jpg"/>
+							</div>
+						</div> -->
+					
+
+
+
+					</div>
+				</section>
+		</div>
+	</div>
+    <footer id="contact" class="py-8 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">Contact us at: <a href="https://melu-e.org/contact" class="text-indigo-500 hover:underline" style="color: #009de8">https://melu-e.org/contact</a></p>
+            <p>&copy; 2024 Melu'e Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+	<script src="js/top_bg.js"></script>
+</body> 
+</html>   
